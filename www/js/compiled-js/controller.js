@@ -254,9 +254,9 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
                     $(fieldInstance.$element).removeAttr("data-hint");
                 });
 
-                // listen for log in form validation success
+                /*// listen for log in form validation success
                 utopiasoftware[utopiasoftware_app_namespace].controller.loginPageViewModel.formValidator.on('form:success',
-                    utopiasoftware[utopiasoftware_app_namespace].controller.loginPageViewModel.formValidated);
+                    utopiasoftware[utopiasoftware_app_namespace].controller.loginPageViewModel.formValidated);*/
 
                 // hide the loader
                 $('#loader-modal').get(0).hide();
@@ -345,8 +345,9 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
          */
         async loginButtonClicked(){
 
-            // run the validation method for the sign-in form
-            utopiasoftware[utopiasoftware_app_namespace].controller.loginPageViewModel.formValidator.whenValidate();
+            /*// run the validation method for the sign-in form
+            utopiasoftware[utopiasoftware_app_namespace].controller.loginPageViewModel.formValidator.whenValidate();*/
+            $('#login-navigator').get(0).pushPage('collator-page.html');
         },
 
         /**

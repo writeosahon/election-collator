@@ -376,13 +376,14 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
                                         $(fieldInstance.$element).removeAttr("data-hint");
                                     });
 
-                                    // listen for log in form validation success
-                                    utopiasoftware[utopiasoftware_app_namespace].controller.loginPageViewModel.formValidator.on('form:success', utopiasoftware[utopiasoftware_app_namespace].controller.loginPageViewModel.formValidated);
+                                    /*// listen for log in form validation success
+                                    utopiasoftware[utopiasoftware_app_namespace].controller.loginPageViewModel.formValidator.on('form:success',
+                                        utopiasoftware[utopiasoftware_app_namespace].controller.loginPageViewModel.formValidated);*/
 
                                     // hide the loader
                                     $('#loader-modal').get(0).hide();
 
-                                case 10:
+                                case 9:
                                 case 'end':
                                     return _context6.stop();
                             }
@@ -483,8 +484,9 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
                         switch (_context7.prev = _context7.next) {
                             case 0:
 
-                                // run the validation method for the sign-in form
-                                utopiasoftware[utopiasoftware_app_namespace].controller.loginPageViewModel.formValidator.whenValidate();
+                                /*// run the validation method for the sign-in form
+                                utopiasoftware[utopiasoftware_app_namespace].controller.loginPageViewModel.formValidator.whenValidate();*/
+                                $('#login-navigator').get(0).pushPage('collator-page.html');
 
                             case 1:
                             case 'end':
