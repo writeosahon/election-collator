@@ -1,0 +1,196 @@
+<!-- project evaluation page -->
+<ons-page id="project-evaluation-page">
+    <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button onclick="utopiasoftware[utopiasoftware_app_namespace].
+            controller.projectEvaluationPageViewModel.backButtonClicked()">
+                <ons-icon icon="md-long-arrow-left"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+        <div class="center" style="line-height: 28px;">
+            <div style="display: block; width: 100%;">
+                <div style="font-size: 0.8em">Project Evaluation</div>
+                <div style="font-size: 0.65em">Report Sheet</div>
+            </div>
+        </div>
+        <div class="right">
+            <ons-toolbar-button onclick="$('#side-menu').get(0).toggle()">
+                <ons-icon icon="md-menu"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+
+    <div style="position: fixed; width: 100%; top: 56px;">
+        <!-- page preloader -->
+        <ons-progress-bar class="page-preloader" indeterminate style="display: none;"></ons-progress-bar>
+
+        <ons-card id="project-evaluation-primary-instruction" style="font-size: 1.2em; font-weight: bold; display: none"
+                  class="project-evaluation-instructions">
+            Evaluate the milestones of project completion on a scale of 0 - 100%
+        </ons-card>
+
+        <p class="no-milestone-found" style="text-align: center; margin-top: 2em; display: none;">
+            <ons-icon icon="fa-line-chart" size="70px" style="color: grey;"></ons-icon>
+        <div class="no-milestone-found" style="font-size: 1.5em; color: grey; text-align: center; display: none">
+            No Milestone Found For Project
+        </div>
+        <div class="no-milestone-found" style="text-align: center; margin-top: 1em; display: none">
+            <ons-button style="background-color: #3f51b5;"
+                        onclick="utopiasoftware[utopiasoftware_app_namespace].
+            controller.projectEvaluationPageViewModel.backButtonClicked()">Find Another Project</ons-button>
+        </div>
+        </p>
+
+    </div>
+
+    <div style="position: fixed; width: 100%; top: 190px; margin-left: 2.5em; display: none;" class="project-evaluation-instructions">
+        <span id="project-evaluation-milestone-badge" class="e-badge e-badge-primary e-badge-pill"
+              style="text-transform: capitalize; transform: scale(1.5);">Milestone 1</span>
+    </div>
+
+    <div class="content container-fluid" style="position: absolute; top: 230px; width: 100%; display: block">
+        <ons-carousel id="project-evaluation-carousel" fullscreen auto-refresh direction="horizontal" auto-scroll auto-scroll-ratio="0.1"
+                      item-width="100%" initial-index="0">
+            <!--<ons-carousel-item>
+                <ons-card>
+                    <div style="font-size: 1.1em">
+                        Preliminaries
+                    </div>
+
+                    <div class="project-evaluation-slider"></div>
+
+                </ons-card>
+            </ons-carousel-item>
+
+            <ons-carousel-item>
+                <ons-card>
+                    <div style="font-size: 1.1em">
+                        Substructure
+                    </div>
+                    <div class="project-evaluation-slider"></div>
+                    <div class="project-evaluation-milestone-amount">Milestone Value</div>
+                    <div class="project-evaluation-milestone-current-value">Value Completed</div>
+                </ons-card>
+            </ons-carousel-item>
+
+            <ons-carousel-item>
+                <ons-card>
+                    <div style="font-size: 1.1em">
+                        Concrete Work
+                    </div>
+                    <div class="project-evaluation-slider"></div>
+                </ons-card>
+            </ons-carousel-item>
+            <ons-carousel-item style="overflow-y: scroll">
+                <div class="row project-evaluation-images-container" style="margin-top: 1.5em;">
+                    <div class="col-xs-6" style="padding: 0.5em; position: relative">
+                        <div style="position: absolute; top: 5px;">
+                            <ons-speed-dial direction="down">
+                                <ons-fab modifier="utopiasoftware-pic-capture-speed-dial"
+                                         class="utopiasoftware-pic-capture-speed-dial">
+                                    <ons-icon icon="md-image-o"></ons-icon>
+                                </ons-fab>
+                                <ons-speed-dial-item modifier="utopiasoftware-pic-capture-speed-dial-item"
+                                                     class="utopiasoftware-pic-capture-speed-dial">
+                                    <ons-icon icon="md-camera"></ons-icon>
+                                </ons-speed-dial-item>
+                                <ons-speed-dial-item modifier="utopiasoftware-pic-capture-speed-dial-item"
+                                                     class="utopiasoftware-pic-capture-speed-dial">
+                                    <ons-icon icon="md-delete"></ons-icon>
+                                </ons-speed-dial-item>
+                            </ons-speed-dial>
+                        </div>
+                        <img src="css/app-images/xxxhdpi_icon.png" style="width: 100%; border: 2px darkgray groove" alt="Picture 1">
+                    </div>
+                    <div class="col-xs-6" style="padding: 0.5em; position: relative">
+                        <div style="position: absolute; top: 5px;">
+                            <ons-speed-dial direction="down">
+                                <ons-fab modifier="utopiasoftware-pic-capture-speed-dial"
+                                         class="utopiasoftware-pic-capture-speed-dial">
+                                    <ons-icon icon="md-image-o"></ons-icon>
+                                </ons-fab>
+                                <ons-speed-dial-item modifier="utopiasoftware-pic-capture-speed-dial-item"
+                                                     class="utopiasoftware-pic-capture-speed-dial">
+                                    <ons-icon icon="md-camera"></ons-icon>
+                                </ons-speed-dial-item>
+                                <ons-speed-dial-item modifier="utopiasoftware-pic-capture-speed-dial-item"
+                                                     class="utopiasoftware-pic-capture-speed-dial">
+                                    <ons-icon icon="md-delete"></ons-icon>
+                                </ons-speed-dial-item>
+                            </ons-speed-dial>
+                        </div>
+                        <img src="css/app-images/xxxhdpi_landscape.png" style="width: 100%; border: 2px darkgray groove" alt="Picture 2">
+                    </div>
+                    <div class="col-xs-offset-3 col-xs-6" style="padding: 0.5em; position: relative">
+                        <div style="position: absolute; top: 5px;">
+                            <ons-speed-dial direction="down">
+                                <ons-fab modifier="utopiasoftware-pic-capture-speed-dial"
+                                         class="utopiasoftware-pic-capture-speed-dial">
+                                    <ons-icon icon="md-image-o"></ons-icon>
+                                </ons-fab>
+                                <ons-speed-dial-item modifier="utopiasoftware-pic-capture-speed-dial-item"
+                                                     class="utopiasoftware-pic-capture-speed-dial">
+                                    <ons-icon icon="md-camera"></ons-icon>
+                                </ons-speed-dial-item>
+                                <ons-speed-dial-item modifier="utopiasoftware-pic-capture-speed-dial-item"
+                                                     class="utopiasoftware-pic-capture-speed-dial">
+                                    <ons-icon icon="md-delete"></ons-icon>
+                                </ons-speed-dial-item>
+                            </ons-speed-dial>
+                        </div>
+                        <img src="css/app-images/xxxhdpi_portrait.png" style="width: 100%; border: 2px darkgray groove" alt="Picture 3">
+                    </div>
+                </div>
+            </ons-carousel-item>
+            <ons-carousel-item style="position: relative;">
+                <div id="project-evaluation-map" style="position: relative; top: 1px; left: 0; width: calc(100% - 2px);
+                height: (100% - 2px); bottom: 1px; border: 1px #00d5c3 solid; text-align: center;">
+                    <ons-button style="background-color: #3f51b5; position: absolute; top: 3px;
+                    display: inline-block;"
+                        onclick="utopiasoftware[utopiasoftware_app_namespace].
+            controller.projectEvaluationPageViewModel.getProjectGeoLocation()">
+                        Get Project Location</ons-button>
+                </div>
+            </ons-carousel-item>
+            <ons-carousel-item style="overflow-y: auto">
+                <textarea id="project-evaluation-remarks" style="width: 80%; height: 3em; margin-left: 10%;
+                margin-right: 10%; border: 0; border: 1px #00D5C3"></textarea>
+            </ons-carousel-item>
+            -->
+        </ons-carousel>
+
+    </div>
+
+    <ons-fab id="project-evaluation-prev-button" modifier="mini" position="bottom left"
+             style="transform: scale(0); display: none;"
+    onclick="utopiasoftware[utopiasoftware_app_namespace].
+            controller.projectEvaluationPageViewModel.prevButtonClicked()">
+        <ons-icon
+                icon="md-chevron-left">
+        </ons-icon>
+    </ons-fab>
+
+    <ons-fab id="project-evaluation-next-button" modifier="mini" position="bottom right"
+             style="display: none;"
+             onclick="utopiasoftware[utopiasoftware_app_namespace].
+            controller.projectEvaluationPageViewModel.nextButtonClicked()">
+        <ons-icon
+                icon="md-chevron-right">
+        </ons-icon>
+    </ons-fab>
+
+    <ons-bottom-toolbar modifier="aligned" style="display: none">
+
+        <div style="text-align: center; width: 100%">
+            <ons-button disable-auto-styling style="background-color: #00d5c3; border-radius: 0;
+            transform: scale(0.8); text-align: center;"
+                                onclick="utopiasoftware[utopiasoftware_app_namespace].
+                            controller.projectEvaluationPageViewModel.saveReportButtonClicked()">
+                Save Report <ons-icon icon="md-save" size="2x"
+                                  style="margin-left: 0.5em; -webkit-animation-duration:1.5s;animation-duration:1.5s;"></ons-icon>
+            </ons-button>
+        </div>
+
+    </ons-bottom-toolbar>
+
+</ons-page>

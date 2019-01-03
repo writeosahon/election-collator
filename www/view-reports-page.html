@@ -1,0 +1,142 @@
+<!-- view reports page -->
+<ons-page id="view-reports-page">
+    <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button onclick="utopiasoftware[utopiasoftware_app_namespace].
+            controller.viewReportsPageViewModel.backButtonClicked()">
+                <ons-icon icon="md-long-arrow-left"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+        <div class="center">View Reports</div>
+        <div class="right">
+            <ons-toolbar-button onclick="$('#view-reports-additional-menu-popover').get(0).show(this)">
+                <ons-icon icon="md-more-vert"></ons-icon>
+            </ons-toolbar-button>
+            <ons-toolbar-button onclick="$('#side-menu').get(0).toggle()">
+                <ons-icon icon="md-menu"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+
+
+    <div class="content container-fluid">
+
+        <!-- page pull hook -->
+        <ons-pull-hook id="view-reports-pull-hook" threshold-height="120px" fixed-content style="text-align: center">
+            <ons-fab id="view-reports-pull-hook-fab" modifier="mini" style="background-color: #00D5C3; box-shadow: none">
+                <ons-icon icon="fa-long-arrow-down" size="24px" style="color: #FFFFFF"></ons-icon>
+            </ons-fab>
+        </ons-pull-hook>
+
+        <!-- page preloader -->
+        <ons-progress-bar class="page-preloader" indeterminate style="display: none;"></ons-progress-bar>
+
+        <p class="no-report-found" style="text-align: center; margin-top: 2em; display: none;">
+            <ons-icon icon="md-utopiasoftware-icon-document" size="70px" style="color: grey;"></ons-icon>
+            <div class="no-report-found" style="font-size: 1.5em; color: grey; text-align: center; display: none">No Report Found</div>
+        </p>
+
+        <p class="view-reports-load-error" style="text-align: center; margin-top: 2em; display: none;">
+            <ons-icon icon="md-utopiasoftware-icon-document-error" size="70px" style="color: #f30000;"></ons-icon>
+        <div class="view-reports-load-error" style="font-size: 1.5em; color: #f30000; text-align: center; display: none">Error Viewing Reports</div>
+        <div class="view-reports-load-error" style="color: grey; text-align: center; margin-top: 1em; display: none">
+            Pull Down To Refresh
+        </div>
+        </p>
+
+        <ons-list id="view-reports-list" class="show-delete" style="display: none">
+            <ons-list-item modifier="longdivider" tappable lock-on-drag="true"
+                           onclick="">
+                <div class="left">
+                    <ons-icon icon="md-utopiasoftware-icon-document-text" size="56px" class="list-item__icon" style="color: #3F51B5" fixed-width></ons-icon>
+                </div>
+                <div class="center" style="margin-left: 2em">
+                    <span class="list-item__title" style="color: #3F51B5">GHP-0002-REPORT-12345896908903</span>
+                    <span class="list-item__subtitle">Project: GHP-0002</span>
+                    <span class="list-item__subtitle">Evaluated By: writeosahon@gmail.com</span>
+                    <span class="list-item__subtitle" style="font-size: 0.6em">March 6, 2018</span>
+                </div>
+                <div class="right">
+                    <ons-fab modifier="mini" style="background-color: transparent; color: #f30000">
+                        <ons-icon icon="md-delete">
+                        </ons-icon>
+                    </ons-fab>
+                </div>
+            </ons-list-item>
+
+            <ons-list-item modifier="longdivider" tappable lock-on-drag="true"
+                           onclick="">
+                <div class="left">
+                    <ons-icon icon="md-utopiasoftware-icon-document-text" size="56px" class="list-item__icon" style="color: #3F51B5" fixed-width></ons-icon>
+                </div>
+                <div class="center" style="margin-left: 2em">
+                    <span class="list-item__title" style="color: #3F51B5">GHP-0002-REPORT-12345896908903</span>
+                    <span class="list-item__subtitle">Project: GHP-0002</span>
+                    <span class="list-item__subtitle">Evaluated By: writeosahon@gmail.com</span>
+                    <span class="list-item__subtitle" style="font-size: 0.6em">March 6, 2018</span>
+                </div>
+                <div class="right">
+                    <ons-fab modifier="mini" style="background-color: transparent; color: #f30000">
+                        <ons-icon icon="md-delete">
+                        </ons-icon>
+                    </ons-fab>
+                </div>
+            </ons-list-item>
+
+            <ons-list-item modifier="longdivider" tappable lock-on-drag="true"
+                           onclick="">
+                <div class="left">
+                    <ons-icon icon="md-utopiasoftware-icon-document-text" size="56px" class="list-item__icon" style="color: #3F51B5" fixed-width></ons-icon>
+                </div>
+                <div class="center" style="margin-left: 2em">
+                    <span class="list-item__title" style="color: #3F51B5">GHP-0002-REPORT-12345896908903</span>
+                    <span class="list-item__subtitle">Project: GHP-0002</span>
+                    <span class="list-item__subtitle">Evaluated By: writeosahon@gmail.com</span>
+                    <span class="list-item__subtitle" style="font-size: 0.6em">March 6, 2018</span>
+                </div>
+                <div class="right">
+                    <ons-fab modifier="mini" style="background-color: transparent; color: #f30000">
+                        <ons-icon icon="md-delete">
+                        </ons-icon>
+                    </ons-fab>
+                </div>
+            </ons-list-item>
+
+            <ons-list-item modifier="longdivider" tappable lock-on-drag="true"
+                           onclick="">
+                <div class="left">
+                    <ons-icon icon="md-utopiasoftware-icon-document-text" size="56px" class="list-item__icon" style="color: #3F51B5" fixed-width></ons-icon>
+                </div>
+                <div class="center" style="margin-left: 2em">
+                    <span class="list-item__title" style="color: #3F51B5">GHP-0002-REPORT-12345896908903</span>
+                    <span class="list-item__subtitle">Project: GHP-0002</span>
+                    <span class="list-item__subtitle">Evaluated By: writeosahon@gmail.com</span>
+                    <span class="list-item__subtitle" style="font-size: 0.6em">March 6, 2018</span>
+                </div>
+                <div class="right">
+                    <ons-fab modifier="mini" style="background-color: transparent; color: #f30000">
+                        <ons-icon icon="md-delete">
+                        </ons-icon>
+                    </ons-fab>
+                </div>
+            </ons-list-item>
+
+        </ons-list>
+    </div>
+
+    <ons-bottom-toolbar modifier="aligned" style="display: block; background-color: #ffffff;">
+
+        <div id="view-reports-bottom-toolbar-bulk-delete-block" style="text-align: center; width: 100%; display: none">
+            <ons-fab modifier="utopiasoftware-bulk-delete-fab"
+                     style="box-shadow: none; color: #f30000"
+                    onclick="utopiasoftware[utopiasoftware_app_namespace].controller.viewReportsPageViewModel.
+                    bulkDeleteButtonClicked()">
+                <ons-icon icon="md-delete">
+                    <span style="display: block; font-size: 0.45em;">Delete</span>
+                </ons-icon>
+            </ons-fab>
+        </div>
+
+    </ons-bottom-toolbar>
+
+</ons-page>

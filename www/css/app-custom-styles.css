@@ -1,0 +1,264 @@
+
+/** style for custom fonts **/
+@font-face {
+    font-family: 'Cinzel Regular';
+    src: url("custom-font-face/Cinzel-Regular.ttf") format("truetype");
+}
+
+
+/** STYLE FOR PARSLEY VALIDATION LIBRARY **/
+.parsley-errors-list {
+    display: none !important;
+}
+/** STYLE FOR VALIDATION TOOLTIP (HINT.CSS) **/
+[data-hint]:after {
+    font-size: 0.75em !important;
+}
+
+
+/** STYLE FOR THE APP ALERT DIALOG BEGINS **/
+.alert-dialog--utopiasoftware-alert-dialog {
+    width: 90vw;
+    min-width: 90vw;
+}
+/** STYLE FOR THE APP ALERT DIALOG ENDS **/
+
+/** STYLE FOR CUSTOM PROGRESS BAR BEGINS **/
+.progress-bar--determinate-loader {
+    height: 10px;
+    background-color: transparent;
+    border-radius: 4px;
+}
+.progress-bar--determinate-loader__primary,
+.progress-bar--determinate-loader__secondary {
+    background-color: #008000;
+    border-radius: 0;
+}
+.progress-bar--determinate-loader__secondary {
+    background-color: rgba(0, 209, 0, 0.28);
+    z-index: 0;
+    border-radius: 4px;
+}
+/** STYLE FOR CUSTOM PROGRESS BAR ENDS **/
+
+/** STYLE FOR THE LOGIN PAGE BEGINS **/
+#login-carousel ons-carousel-item.first { /* style for login slides/carousel item 1 */
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0,0) 100%),
+    url('app-images/edpms-background.png');
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    background-position: 0% 0%, 50% 100%;
+
+    position: relative;
+}
+#login-page ons-input input {
+    /*font-size: 0.7em;*/
+    height: 1.2em;
+    line-height: 1.2em;
+    color: #00d5c3 !important;
+    caret-color: #00d5c3;
+}
+
+.checkbox--login-checkbox {
+    line-height: 18px;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    overflow: visible;
+}
+.checkbox--login-checkbox__checkmark {
+    width: 18px;
+    height: 18px;
+}
+.checkbox--login-checkbox__checkmark:before {
+    border-radius: 2px;
+    height: 18px;
+    width: 18px;
+    border: 2px solid #00d5c3;
+    transition: background-color 0.1s linear 0.2s, border-color 0.1s linear 0.2s;
+    background-color: #696969;
+}
+:checked + .checkbox--login-checkbox__checkmark:before {
+    border: 2px solid #00d5c3;
+    border: 2px solid rgba(0, 213, 195, 1);
+    background-color: #F4C724;
+    background-color: rgba(244, 199, 36, 1);
+    transition: background-color 0.1s linear, border-color 0.1s linear;
+}
+.checkbox--login-checkbox__checkmark:after {
+    border-color: #00d5c3;
+    border-color: rgba(0, 213, 195, 1);
+    transition: -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease 0s;
+    transition: transform 0.2s ease 0s, -webkit-transform 0.2s ease 0s;
+    width: 10px;
+    height: 5px;
+    top: 4px;
+    left: 3px;
+    -webkit-transform: scale(0) rotate(-45deg);
+    transform: scale(0) rotate(-45deg);
+    border-width: 2px;
+}
+:checked + .checkbox--login-checkbox__checkmark:after {
+    transition: -webkit-transform 0.2s ease 0.2s;
+    transition: transform 0.2s ease 0.2s;
+    transition: transform 0.2s ease 0.2s, -webkit-transform 0.2s ease 0.2s;
+    width: 10px;
+    height: 5px;
+    top: 4px;
+    left: 3px;
+    -webkit-transform: scale(1) rotate(-45deg);
+    transform: scale(1) rotate(-45deg);
+    border-width: 2px;
+}
+/* active ring effect */
+.checkbox--login-checkbox__input:before {
+    content: '';
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    box-shadow: 0 0 0 11px #696969;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: #696969;
+    pointer-events: none;
+    display: block;
+    -webkit-transform: scale3d(0.2, 0.2, 0.2);
+    transform: scale3d(0.2, 0.2, 0.2);
+    transition: opacity 0.25s ease-out, -webkit-transform 0.1s ease-out;
+    transition: opacity 0.25s ease-out, transform 0.1s ease-out;
+    transition: opacity 0.25s ease-out, transform 0.1s ease-out, -webkit-transform 0.1s ease-out;
+}
+.checkbox--material__input:checked:before {
+    box-shadow: 0 0 0 11px rgba(244, 199, 36, 1);
+    background-color: #f4c724;
+    background-color: rgba(244, 199, 36, 1);
+}
+/** STYLE FOR THE LOGIN PAGE ENDS **/
+
+
+/** STYLE FOR THE SEARCH PROJECT PAGE BEGINS **/
+#search-project-page .page--material__background {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255,0.9) 100%),
+    url('app-images/search-project-background.png');
+    background-repeat: no-repeat;
+    background-size: cover, contain;
+    background-position: center;
+}
+#search-project-page ons-search-input input {
+    text-transform: uppercase;
+}
+/** STYLE FOR THE SEARCH PROJECT PAGE ENDS **/
+
+
+/** STYLE FOR THE PROJECT EVALUATION PAGE BEGINS **/
+#project-evaluation-page .page--material__background {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255,0.95) 100%),
+    url('app-images/project-evaluation-background.png');
+    background-repeat: no-repeat;
+    background-size: cover, cover;
+    background-position: center;
+}
+/** STYLE FOR SLIDERS ON PROJECT EVALUATION PAGE **/
+#project-evaluation-page .project-evaluation-slider .e-slider-track {
+    height: 2rem;
+}
+#project-evaluation-page .project-evaluation-slider .e-range {
+    height: 2rem;
+    background-color: #3f51b5;
+}
+#project-evaluation-page .project-evaluation-slider .e-handle {
+    height: 3rem;
+    width: 3rem;
+    color: #ffffff;
+    background-color: #3f51b5;
+    text-align: center;
+    padding-top: 0.7rem;
+    border: 3px #36366C ridge;
+}
+/** STYLE FOR THE SPEED DIALS ON PROJECT EVALUATION PAGE **/
+.utopiasoftware-pic-capture-speed-dial { /** specify the color for the speed dials and all its items **/
+    color: #FFFFFF;
+    background-color: #3F51B5;
+    box-shadow:
+            0 4px 5px 0 rgba(0, 0, 0, .14),
+            0 1px 10px 0 rgba(0, 0, 0, .12),
+            0 2px 4px -1px rgba(0, 0, 0, .4);
+    transition: all 0.2s ease-in-out;
+}
+.utopiasoftware-pic-capture-speed-dial:active { /** specify the active color for the speed dials and all its items **/
+    box-shadow:
+            0 8px 10px 1px rgba(0, 0, 0, .14),
+            0 3px 14px 2px rgba(0, 0, 0, .12),
+            0 5px 5px -3px rgba(0, 0, 0, .4);
+    background-color: #3F51B5;
+    background-color: rgba(63, 81, 181, .7);
+    transition: all 0.2s ease;
+}
+.fab--utopiasoftware-pic-capture-speed-dial{ /** specific style for JUST the SPEED DIALS **/
+    transform: scale(0.8) !important;
+}
+.speed-dial__item--utopiasoftware-pic-capture-speed-dial-item { /** specific style for JUST the SPEED DIAL ITEMS **/
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    left: 15px !important;
+}
+/** STYLE FOR THE MAP ELEMENTS ON PROJECT EVALUATION PAGE **/
+html.utopiasoftware-transparent body.utopiasoftware-transparent .page--material:not(#side-menu-page) .page--material__background,
+html.utopiasoftware-transparent body.utopiasoftware-transparent .page--material:not(#side-menu-page) .page--material__content { /** make entire app page background transparent **/
+    background-color: transparent !important;
+    background: transparent !important;
+}
+.progress-circular--project-gps-location-progress__primary { /** style for circular progress bar on map **/
+    stroke: #00D5C3;
+}
+/** STYLE FOR THE PROJECT EVALUATION PAGE ENDS **/
+
+
+/** STYLE FOR THE SIDE MENU PAGE BEGINS **/
+#side-menu-page .page--material__background {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255,0.9) 100%),
+    url('app-images/side-menu-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover, cover;
+    background-position: center;
+}
+/** STYLE FOR THE SIDE MENU PAGE ENDS **/
+
+
+/** STYLE FOR THE VIEW REPORTS PAGE BEGINS **/
+#view-reports-page #view-reports-list .list-view-infinite-loader ons-icon[spin] { /* increase the speed of the list-view-infinite-loader spinner **/
+    -webkit-animation: ons-icon-spin 0.6s infinite linear;
+    -moz-animation: ons-icon-spin 0.6s infinite linear;
+    animation: ons-icon-spin 0.6s infinite linear;
+}
+#view-reports-page #view-reports-pull-hook #view-reports-pull-hook-fab ons-icon[spin] { /* increase the speed of the pull-to-refresh spinner **/
+    -webkit-animation: ons-icon-spin 0.5s infinite linear;
+    -moz-animation: ons-icon-spin 0.5s infinite linear;
+    animation: ons-icon-spin 0.5s infinite linear;
+}
+#view-reports-page .fab--utopiasoftware-bulk-delete-fab { /** specify the color for the bulk delete fab button **/
+    background-color: rgb(255, 255, 255);
+}
+#view-reports-page .fab--utopiasoftware-bulk-delete-fab:active { /** specify the active color for the bulk delete fab button **/
+    background-color: rgba(244, 199, 36, 0.4);
+    transition: all 0.2s ease;
+}
+#view-reports-page #view-reports-list.hide-delete .fab--mini{
+    display: none !important;
+}
+#view-reports-page #view-reports-list.hide-delete .checkbox{
+    display: inline-block !important;
+}
+#view-reports-page #view-reports-list.show-delete .fab--mini{
+    display: inline-block !important;
+}
+#view-reports-page #view-reports-list.show-delete .checkbox{
+    display: none !important;
+}
+/** STYLE FOR THE VIEW REPORTS PAGE ENDS **/

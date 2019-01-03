@@ -1,0 +1,150 @@
+<!-- evaluation report page -->
+<ons-page id="evaluation-report-page">
+    <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button onclick="utopiasoftware[utopiasoftware_app_namespace].
+            controller.evaluationReportPageViewModel.backButtonClicked()">
+                <ons-icon icon="md-long-arrow-left"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+        <div class="center">Evaluation Report</div>
+        <div class="right">
+            <ons-toolbar-button onclick="$('#side-menu').get(0).toggle()">
+                <ons-icon icon="md-menu"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+
+
+    <div class="content container-fluid">
+
+        <!-- page preloader -->
+        <ons-progress-bar class="page-preloader" indeterminate style="display: none;"></ons-progress-bar>
+
+        <p class="no-report-found" style="text-align: center; margin-top: 2em; display: none;">
+            <ons-icon icon="md-utopiasoftware-icon-document" size="70px" style="color: grey;"></ons-icon>
+        <div class="no-report-found" style="font-size: 1.5em; color: grey; text-align: center; display: none">No Report Found</div>
+        </p>
+
+        <p class="evaluation-report-load-error" style="text-align: center; margin-top: 2em; display: none;">
+            <ons-icon icon="md-utopiasoftware-icon-document-error" size="70px" style="color: #f30000;"></ons-icon>
+        <div class="evaluation-report-load-error" style="font-size: 1.5em; color: #f30000; text-align: center; display: none">Error Viewing Report</div>
+        </p>
+
+        <ons-list id="evaluation-report-list" style="display: none">
+
+            <ons-list-header>Report Title</ons-list-header>
+
+            <ons-list-item modifier="longdivider" lock-on-drag="true"
+                           onclick="">
+                <div class="center" style="">
+                    <span class="list-item__title" style="color: #3F51B5; text-transform: uppercase">GHP-0002-REPORT-12345896908903</span>
+                </div>
+            </ons-list-item>
+
+            <ons-list-header>Project Title</ons-list-header>
+
+            <ons-list-item modifier="longdivider" lock-on-drag="true"
+                           onclick="">
+                <div class="center" style="">
+                    <span class="list-item__title" style="color: #3F51B5; text-transform: uppercase">GHP-0002</span>
+                </div>
+            </ons-list-item>
+
+            <ons-list-header>Project ID</ons-list-header>
+
+            <ons-list-item modifier="longdivider" lock-on-drag="true"
+                           onclick="">
+                <div class="center" style="">
+                    <span class="list-item__title" style="color: #3F51B5; text-transform: uppercase">GHP-0002</span>
+                </div>
+            </ons-list-item>
+
+            <ons-list-header>Project Milestones</ons-list-header>
+
+            <ons-list-item modifier="longdivider" lock-on-drag="true" expandable
+                           onclick="">
+                <div class="center" style="">
+                    <span class="list-item__title" style="color: #3F51B5;">Milestone Progress Evaluation</span>
+                </div>
+                <div class="expandable-content">
+                    <div class="row">
+                        <div class="col-xs-9" style="text-transform: capitalize">Preliminaries</div>
+                        <div class="col-xs-3" style="text-align: left; padding-left: 1em;">20%</div>
+                        <div class="col-xs-9" style="text-transform: capitalize">Substructure</div>
+                        <div class="col-xs-3" style="text-align: left; padding-left: 1em;">20%</div>
+                    </div>
+                </div>
+            </ons-list-item>
+
+            <ons-list-header>Project Photos</ons-list-header>
+
+            <ons-list-item modifier="longdivider" lock-on-drag="true" expandable
+                           onclick="">
+                <div class="center" style="">
+                    <span class="list-item__title" style="color: #3F51B5;">View Photos</span>
+                </div>
+                <div class="expandable-content">
+                    <div class="row">
+                        <div class="col-xs-6" style="padding: 0.5em;">
+                            <img src="css/app-images/project-evaluation-photo-placeholder.png" style="width: 100%; border: 2px darkgray groove">
+                        </div>
+                        <div class="col-xs-6" style="padding: 0.5em;">
+                            <img src="css/app-images/project-evaluation-photo-placeholder.png" style="width: 100%; border: 2px darkgray groove">
+                        </div>
+                        <div class="col-xs-6" style="padding: 0.5em;">
+                            <img src="css/app-images/project-evaluation-photo-placeholder.png" style="width: 100%; border: 2px darkgray groove">
+                        </div>
+                    </div>
+                </div>
+            </ons-list-item>
+
+            <ons-list-header>Project Location</ons-list-header>
+
+            <ons-list-item modifier="longdivider" lock-on-drag="true"
+                           onclick="">
+                <div class="center" style="">
+                    <span class="list-item__title" style="color: #3F51B5;">6.344556,-5.678990</span>
+                </div>
+            </ons-list-item>
+
+            <ons-list-header>Evaluation Remarks</ons-list-header>
+
+            <ons-list-item modifier="longdivider" lock-on-drag="true"
+                           onclick="">
+                <div class="center" style="">
+                    <span class="list-item__title" style="color: #3F51B5;">Good job</span>
+                </div>
+            </ons-list-item>
+
+            <ons-list-header>Evaluation By</ons-list-header>
+
+            <ons-list-item modifier="longdivider" lock-on-drag="true"
+                           onclick="">
+                <div class="center" style="">
+                    <span class="list-item__title" style="color: #3F51B5;">writeosahon@gmail.com</span>
+                </div>
+            </ons-list-item>
+
+            <ons-list-header>Evaluation Date</ons-list-header>
+
+            <ons-list-item modifier="longdivider" lock-on-drag="true"
+                           onclick="">
+                <div class="center" style="">
+                    <span class="list-item__title" style="color: #3F51B5;">March 6, 2018</span>
+                </div>
+            </ons-list-item>
+
+        </ons-list>
+    </div>
+
+    <ons-fab id="evaluation-report-delete-fab" position="bottom right"
+             style="background-color: transparent; background-color: #ffffff; color: #f30000"
+             disabled onclick="utopiasoftware[utopiasoftware_app_namespace].controller.
+             evaluationReportPageViewModel.reportDeleteButtonClicked(this);">
+        <ons-icon icon="md-delete">
+        </ons-icon>
+    </ons-fab>
+
+
+</ons-page>

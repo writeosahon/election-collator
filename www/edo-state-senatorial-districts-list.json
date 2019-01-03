@@ -1,0 +1,32 @@
+{"total_rows":3,"offset":0,
+  "rows":[
+{"id":"edo_central",
+  "key":"edo_central",
+  "value":"Edo Central",
+  "doc":
+  {"_id":"edo_central",
+    "_rev":"6-8d64729884b7b04facb4bd44d6bc3e9b",
+    "docType":"Senatorial_Districts",
+    "senatorial_code":"edo_central",
+    "senatorial_description":"Edo Central"
+  }
+},
+{"id":"edo_north",
+  "key":"edo_north",
+  "value":"Edo North",
+  "doc":
+  {"_id":"edo_north",
+    "_rev":"1-e950457df24d3a7dee2b3f013e21d54f",
+    "docType":"Senatorial_Districts",
+    "senatorial_code":"edo_north",
+    "senatorial_description":"Edo North"}},
+{"id":"edo_south",
+  "key":"edo_south",
+  "value":"Edo South",
+  "doc":
+  {"_id":"edo_south",
+    "_rev":"1-2a8ad301566a7172600246c16e19ce3b",
+    "docType":"Senatorial_Districts",
+    "senatorial_code":"edo_south",
+    "senatorial_description":"Edo South"}}
+]}
