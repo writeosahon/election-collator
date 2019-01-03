@@ -3808,7 +3808,7 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
                                     case 3:
 
                                         // initialise the SENATORIAL DISTRICT DROPDOWN LIST
-                                        new ej.dropdowns.DropDownLis({
+                                        new ej.dropdowns.DropDownList({
                                             dataSource: utopiasoftware[utopiasoftware_app_namespace].controller.collatorPageViewModel.electionDataArray[0],
                                             enabled: true,
                                             floatLabelType: 'Auto',
